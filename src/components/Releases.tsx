@@ -39,7 +39,7 @@ const Releases = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold mb-6">Релизы</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Последние работы наших артистов
           </p>
         </div>
@@ -48,22 +48,22 @@ const Releases = () => {
           {releases.map((release, index) => (
             <Card
               key={index}
-              className="p-6 hover:shadow-lg transition-shadow border-gray-100 animate-fade-in"
+              className="p-6 hover:shadow-lg transition-shadow border-border animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex gap-6">
-                <div className="w-32 h-32 bg-gradient-to-br from-[#9b87f5] to-[#6E59A5] rounded-lg flex-shrink-0 flex items-center justify-center">
+                <div className="w-32 h-32 bg-gradient-to-br from-[#6E7261] to-[#9DA190] rounded-lg flex-shrink-0 flex items-center justify-center">
                   <Icon name="Music" className="text-white" size={48} />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="text-xl font-semibold">{release.title}</h3>
-                    <Badge variant="secondary" className="bg-gray-100">
+                    <Badge variant="secondary" className="bg-muted">
                       {release.type}
                     </Badge>
                   </div>
-                  <p className="text-gray-600 mb-4">{release.artist}</p>
-                  <div className="flex items-center gap-4 text-sm text-gray-500">
+                  <p className="text-muted-foreground mb-4">{release.artist}</p>
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground/80">
                     <span>{release.date}</span>
                     <span>•</span>
                     <span className="flex items-center gap-1">

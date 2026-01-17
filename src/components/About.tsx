@@ -21,11 +21,11 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-32 px-6 bg-gray-50">
+    <section id="about" className="py-32 px-6 bg-muted">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold mb-6">О лейбле</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Мы работаем с артистами на одной волне. Вся музыка.
           </p>
         </div>
@@ -34,14 +34,14 @@ const About = () => {
           {values.map((value, index) => (
             <Card
               key={index}
-              className="p-8 hover:shadow-lg transition-shadow duration-300 border-gray-100 animate-fade-in"
+              className="p-8 hover:shadow-lg transition-shadow duration-300 border-border animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-12 h-12 bg-[#9b87f5] rounded-full flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-[#6E7261] rounded-full flex items-center justify-center mb-6">
                 <Icon name={value.icon} className="text-white" size={24} />
               </div>
               <h3 className="text-2xl font-semibold mb-4">{value.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{value.description}</p>
+              <p className="text-muted-foreground leading-relaxed">{value.description}</p>
             </Card>
           ))}
         </div>

@@ -97,8 +97,8 @@ const ArtistPortal = ({ onBack }: ArtistPortalProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <nav className="bg-white border-b border-gray-100">
+    <div className="min-h-screen bg-muted">
+      <nav className="bg-background border-b border-border">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button onClick={onBack} className="hover:text-gray-600 transition-colors">
@@ -106,7 +106,7 @@ const ArtistPortal = ({ onBack }: ArtistPortalProps) => {
             </button>
             <div className="text-2xl font-bold">WAM Portal</div>
           </div>
-          <Badge variant="secondary" className="bg-[#9b87f5] text-white">
+          <Badge variant="secondary" className="bg-[#6E7261] text-[#FFFCF3]">
             Артист
           </Badge>
         </div>
@@ -115,14 +115,14 @@ const ArtistPortal = ({ onBack }: ArtistPortalProps) => {
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="mb-8">
           <h1 className="text-4xl font-bold mb-2">Портал артиста</h1>
-          <p className="text-gray-600">Управление треками и мониторинг дистрибуции</p>
+          <p className="text-muted-foreground">Управление треками и мониторинг дистрибуции</p>
         </div>
 
         <div className="flex gap-4 mb-8">
           <Button
             onClick={() => setActiveTab('upload')}
             variant={activeTab === 'upload' ? 'default' : 'outline'}
-            className={activeTab === 'upload' ? 'bg-black' : ''}
+            className={activeTab === 'upload' ? 'bg-primary' : ''}
           >
             <Icon name="Upload" size={18} className="mr-2" />
             Загрузить трек
@@ -190,13 +190,13 @@ const ArtistPortal = ({ onBack }: ArtistPortalProps) => {
                 />
               </div>
 
-              <div className="border-2 border-dashed border-gray-300 rounded-lg p-12 text-center hover:border-[#9b87f5] transition-colors cursor-pointer">
-                <Icon name="Upload" size={48} className="mx-auto mb-4 text-gray-400" />
+              <div className="border-2 border-dashed border-border rounded-lg p-12 text-center hover:border-[#6E7261] transition-colors cursor-pointer">
+                <Icon name="Upload" size={48} className="mx-auto mb-4 text-muted-foreground" />
                 <p className="text-lg font-medium mb-2">Загрузите аудиофайл</p>
-                <p className="text-sm text-gray-500">WAV, MP3, FLAC до 500MB</p>
+                <p className="text-sm text-muted-foreground">WAV, MP3, FLAC до 500MB</p>
               </div>
 
-              <Button type="submit" className="w-full bg-black hover:bg-gray-800" size="lg">
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/90" size="lg">
                 Загрузить трек
               </Button>
             </form>
@@ -208,24 +208,24 @@ const ArtistPortal = ({ onBack }: ArtistPortalProps) => {
             {tracks.map((track) => (
               <Card key={track.id} className="p-6">
                 <div className="flex items-start gap-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#9b87f5] to-[#7E69AB] rounded-lg flex-shrink-0 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#6E7261] to-[#9DA190] rounded-lg flex-shrink-0 flex items-center justify-center">
                     <Icon name="Music" className="text-white" size={32} />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-2">
                       <div>
                         <h3 className="text-xl font-semibold">{track.title}</h3>
-                        <p className="text-gray-600">{track.artist}</p>
+                        <p className="text-muted-foreground">{track.artist}</p>
                       </div>
                       <Badge className={getStatusColor(track.status)}>
                         {getStatusText(track.status)}
                       </Badge>
                     </div>
-                    <p className="text-sm text-gray-500 mb-3">Загружено: {track.uploadDate}</p>
+                    <p className="text-sm text-muted-foreground/80 mb-3">Загружено: {track.uploadDate}</p>
                     {track.status !== 'distributed' && (
                       <div className="space-y-2">
                         <div className="flex items-center justify-between text-sm">
-                          <span className="text-gray-600">Прогресс дистрибуции</span>
+                          <span className="text-muted-foreground">Прогресс дистрибуции</span>
                           <span className="font-medium">{track.progress}%</span>
                         </div>
                         <Progress value={track.progress} className="h-2" />

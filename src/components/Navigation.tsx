@@ -27,7 +27,7 @@ const Navigation = ({ onPortalClick }: NavigationProps) => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-lg z-50 border-b border-gray-100">
+    <nav className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-lg z-50 border-b border-border">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold tracking-tight">WAM</div>
@@ -37,14 +37,14 @@ const Navigation = ({ onPortalClick }: NavigationProps) => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm font-medium text-gray-600 hover:text-black transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.label}
               </button>
             ))}
             <Button
               onClick={onPortalClick}
-              className="bg-[#9b87f5] hover:bg-[#7E69AB] text-white"
+              className="bg-[#6E7261] hover:bg-[#6E7261]/90 text-[#FFFCF3]"
             >
               Портал артистов
             </Button>
@@ -64,7 +64,7 @@ const Navigation = ({ onPortalClick }: NavigationProps) => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left text-sm font-medium text-gray-600 hover:text-black transition-colors py-2"
+                className="block w-full text-left text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
               >
                 {item.label}
               </button>

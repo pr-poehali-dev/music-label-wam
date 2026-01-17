@@ -30,17 +30,17 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-32 px-6 bg-gray-50">
+    <section id="contact" className="py-32 px-6 bg-muted">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-5xl md:text-6xl font-bold mb-6">Контакты</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Готовы начать работу? Свяжитесь с нами
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          <Card className="p-8 border-gray-100">
+          <Card className="p-8 border-border">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium mb-2">Имя</label>
@@ -71,7 +71,7 @@ const Contact = () => {
                   required
                 />
               </div>
-              <Button type="submit" className="w-full bg-black hover:bg-gray-800">
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
                 Отправить сообщение
               </Button>
             </form>
@@ -84,7 +84,7 @@ const Contact = () => {
                 className="flex items-start gap-4 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-12 h-12 bg-[#9b87f5] rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-[#6E7261] rounded-full flex items-center justify-center flex-shrink-0">
                   <Icon name={contact.icon} className="text-white" size={20} />
                 </div>
                 <div>
@@ -99,7 +99,7 @@ const Contact = () => {
                 {['Instagram', 'Youtube', 'Music'].map((platform, index) => (
                   <button
                     key={index}
-                    className="w-12 h-12 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center transition-colors"
+                    className="w-12 h-12 bg-primary hover:bg-primary/90 rounded-full flex items-center justify-center transition-colors"
                   >
                     <Icon name={platform} className="text-white" size={20} />
                   </button>
@@ -109,7 +109,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="mt-20 text-center text-gray-500 text-sm">
+        <div className="mt-20 text-center text-muted-foreground/80 text-sm">
           <p>© 2024 WAM (We Are Music). Все права защищены.</p>
         </div>
       </div>
