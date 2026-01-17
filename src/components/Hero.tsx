@@ -14,8 +14,11 @@ const Hero = () => {
         <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tight">
           WE ARE MUSIC
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-          Музыкальный лейбл и дистрибьютор. Мы занимаемся всей технической и организационной частью релиза, а ты фокусируешься на творчестве.
+        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+          WAM (We Are Music) - музыкальный лейбл и дистрибьютор, основанный в 2018 году.
+        </p>
+        <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+          Наша главная цель - чтобы артист не тратил время на рутину. Без лишних процессов, скрытых условий и непонятных схем. Мы - музыка. Мы занимаемся всей технической и организационной частью релиза, а ты фокусируешься на творчестве.
         </p>
         <Button
           onClick={scrollToContact}

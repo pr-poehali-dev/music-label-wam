@@ -5,47 +5,43 @@ const Services = () => {
     {
       icon: 'Music',
       title: 'Дистрибуция',
-      description: 'Аудио и видео-контент на все основные стримминговые сервисы',
+      description: 'Дистрибуция аудио-/видео-контента на все основные стримминговые сервисы',
     },
     {
       icon: 'Users',
       title: 'Менеджмент артистов',
-      description: 'Контроль и поддержка на основе модели "360 градусов"',
+      description: 'Менеджмент артистов (в том числе контроль артистов на основе "360 градусов")',
     },
     {
       icon: 'Mic',
-      title: 'Концерты',
-      description: 'Полная организация концертов и живых выступлений',
+      title: 'Организация концертов',
+      description: 'Организация концертов',
     },
     {
       icon: 'TrendingUp',
       title: 'Маркетинг',
-      description: 'Настройка таргетированной рекламы и продвижение',
+      description: 'Настройка таргетированной рекламы и маркетинг',
     },
     {
       icon: 'Headphones',
       title: 'Поддержка',
-      description: 'Помощь артистам по любым вопросам 24/7',
+      description: 'Помощь и поддержка артистов по любым вопросам',
     },
   ];
 
   const platforms = [
     'Яндекс.Музыка',
-    'VK Музыка',
+    'VK',
     'Звук',
     'Apple Music',
     'Spotify',
-    'YouTube Music',
   ];
 
   return (
     <section id="services" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">Услуги</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Полный комплекс услуг для развития музыкальной карьеры
-          </p>
+          <h2 className="text-5xl md:text-6xl font-bold mb-6">Что мы делаем</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20">
